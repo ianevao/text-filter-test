@@ -5,7 +5,7 @@ public class FilterWhereContainsLetterT : ITextFilter
 {
     public IEnumerable<string> Filter(IEnumerable<string> words)
     {
-        var removable = words.Where(i => i.Contains("t"));
+        var removable = words.Where(i => i.Contains("t", StringComparison.CurrentCultureIgnoreCase));
         return words.Where(i => !removable.Contains(i));
     }
 }

@@ -26,4 +26,25 @@ public class FilterMiddleVowelsTests
         Assert.NotNull(result);
         Assert.Equal(expectedWordCount, result.Count());
     }
+    
+    [Theory]
+    [InlineData("ran")]
+    [InlineData("med")]
+    [InlineData("down")]
+    [InlineData("slowly")]
+    public void Given_StringWithMiddleVowels_WhenFiltered_ThenStringDoesNotExist(string word)
+    {
+        // Arrange
+        const int expectedWordCount = 0;
+        ITextFilter textFilter = new FilterMiddleVowels();
+
+        IEnumerable<string> words = new[] { word };
+
+        // Act
+        var result = textFilter.Filter(words);
+
+        // Assert
+        Assert.NotNull(result);
+        Assert.Empty(result);
+    }
 }

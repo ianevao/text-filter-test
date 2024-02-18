@@ -11,6 +11,7 @@ public class FilterMiddleVowels : ITextFilter
 
     private bool ContainsVowel(string word)
     {
+        word = word.Trim(',', '\'');
         int centerPoint = word.Length / 2;
         bool isCharVowel;
             

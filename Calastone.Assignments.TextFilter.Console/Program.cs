@@ -5,8 +5,10 @@ using Calastone.Assignments.TextFilter.Core.Helpers;
 using Calastone.Assignments.TextFilter.Core.Interfaces.Filters;
 using Calastone.Assignments.TextFilter.Service;
 
-Console.WriteLine("Hello and welcome to the Calastone Technical Test! Please press Enter on your keyboard to run the sample file content through the filters and output the results.");
-// Console.ReadLine();
+Console.WriteLine("Hello and welcome to the Calastone Technical Test!");
+Console.WriteLine();
+Console.WriteLine("OUTPUT below:");
+Console.WriteLine();
 
 // Get file content
 var fileHandlerService = new FileHandlerService();
